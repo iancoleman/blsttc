@@ -10,11 +10,15 @@ version = "4.0.0"
 
 [dependencies]
 blst = { version = "0.3.7", features = ["portable"] }
-blstrs = { version = "0.4.2", features = ["portable"] }
-ff = "0.11.0"
-group = "0.11.0"
+blstrs = { git = "https://github.com/dan-da/blstrs", branch = "blst_version_bump_pr" }
+# ff = "0.11.0"
+# group = "0.11.0"
+ff = { git = "https://github.com/davidrusu/ff.git", branch="switch-to-subtle-ng"} # "0.11"
+group = { git = "https://github.com/davidrusu/group.git", branch="switch-to-subtle-ng", features = ["tests"] } # version = "0.11", features = ["tests"] }
 hex_fmt = "0.3.0"
-pairing = "0.21.0"
+# pairing = "0.21.0"
+pairing = { git = "https://github.com/davidrusu/pairing", branch="switch-to-subtle-ng", package = "pairing"  } # { version = "0.21", package = "pairing" }
+
 rand = "0.8.5"
 rand_chacha = "0.3.1"
 serde = { version = "1.0.104", features = ["derive"] }
